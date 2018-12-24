@@ -34,9 +34,9 @@
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otwórzDokumentacjęToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informacjeOProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otwórzPrzewodnikPoAplikacjiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.informacjeOProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@
             // zakończToolStripMenuItem
             // 
             this.zakończToolStripMenuItem.Name = "zakończToolStripMenuItem";
+            this.zakończToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.zakończToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zakończToolStripMenuItem.Text = "Zakończ";
             this.zakończToolStripMenuItem.Click += new System.EventHandler(this.zakończToolStripMenuItem_Click);
@@ -87,16 +88,9 @@
             // otwórzDokumentacjęToolStripMenuItem
             // 
             this.otwórzDokumentacjęToolStripMenuItem.Name = "otwórzDokumentacjęToolStripMenuItem";
-            this.otwórzDokumentacjęToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.otwórzDokumentacjęToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.otwórzDokumentacjęToolStripMenuItem.Text = "Otwórz dokumentację";
             this.otwórzDokumentacjęToolStripMenuItem.Click += new System.EventHandler(this.otwórzDokumentacjęToolStripMenuItem_Click);
-            // 
-            // informacjeOProgramieToolStripMenuItem
-            // 
-            this.informacjeOProgramieToolStripMenuItem.Name = "informacjeOProgramieToolStripMenuItem";
-            this.informacjeOProgramieToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.informacjeOProgramieToolStripMenuItem.Text = "Informacje o programie";
-            this.informacjeOProgramieToolStripMenuItem.Click += new System.EventHandler(this.informacjeOProgramieToolStripMenuItem_Click);
             // 
             // otwórzPrzewodnikPoAplikacjiToolStripMenuItem
             // 
@@ -109,6 +103,13 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(236, 6);
+            // 
+            // informacjeOProgramieToolStripMenuItem
+            // 
+            this.informacjeOProgramieToolStripMenuItem.Name = "informacjeOProgramieToolStripMenuItem";
+            this.informacjeOProgramieToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.informacjeOProgramieToolStripMenuItem.Text = "Informacje o programie";
+            this.informacjeOProgramieToolStripMenuItem.Click += new System.EventHandler(this.informacjeOProgramieToolStripMenuItem_Click);
             // 
             // StronaGłówna
             // 
