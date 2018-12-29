@@ -34,16 +34,16 @@ namespace KonkursyMuzyczne
 
         private void zakończToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Deklarowanie treści komunikatu
+            //Deklarowanie treści komunikatu:
             string wiadomosc = "Czy jestes pewny ze chcesz zakonczyc program?";
             string tytul = "Zamniecie";
 
-            //Komunikat do zamknięcia programu
+            //Komunikat do zamknięcia programu:
             var rezultat = MessageBox.Show(wiadomosc, tytul,
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Question);
 
-            //Zamknięcie programu
+            //Zamknięcie programu:
             if (rezultat == DialogResult.Yes)
             {
                 Dispose();
@@ -52,24 +52,43 @@ namespace KonkursyMuzyczne
 
         private void informacjeOProgramieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Deklarowanie treści komunikatu
+            //Deklarowanie treści komunikatu:
             string wiadomosc = "Program przygotowany w ramach przedmiotu ADO.NET\nAplikacja ma za zadanie łączenie się z bazą danych uczestników konkursów muzycznych oraz możliwość jej edycji.\n\nPrzygotowali: Maciej Jabłoński, Magda Witecka\n\nProwadzący: dr Karol Korczak\n\nInformatyka i Ekonometria Rok III 2018-2019 Semestr zimowy";
             string tytul = "O programie";
 
-            //Komunikat z informacjami o programie
+            //Komunikat z informacjami o programie:
             MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void otwórzDokumentacjęToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Otwieranie dokumentacji
+            //Otwieranie dokumentacji:
             System.Diagnostics.Process.Start(@"C:\Users\Magda1\Desktop\dokumentacja.odt");
         }
 
         private void otwórzPrzewodnikPoAplikacjiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Otwieranie przewodnika użytkownika
+            //Otwieranie przewodnika użytkownika:
             System.Diagnostics.Process.Start(@"C:\Users\Magda1\Desktop\dokumentacja.odt");
+        }
+
+        private void pełnyEkranToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Ustawienie pełnego ekranu:
+            
+            //Sprawdzanie stanu przycisku - Czy jest wciśnięty (standardowo nie wciśnięty):
+            if (pełnyEkranToolStripMenuItem.Checked)
+            {
+                this.TopMost = true;
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.TopMost = true;
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+                this.WindowState = FormWindowState.Normal;
+            }
         }
     }
 }

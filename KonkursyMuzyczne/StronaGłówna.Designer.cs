@@ -32,6 +32,8 @@
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zakończToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.widokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pełnyEkranToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otwórzDokumentacjęToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otwórzPrzewodnikPoAplikacjiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,10 +47,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.plikToolStripMenuItem,
             this.edycjaToolStripMenuItem,
+            this.widokToolStripMenuItem,
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(544, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(421, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,7 +67,7 @@
             // 
             this.zakończToolStripMenuItem.Name = "zakończToolStripMenuItem";
             this.zakończToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.zakończToolStripMenuItem.Text = "Zakończ";
             this.zakończToolStripMenuItem.Click += new System.EventHandler(this.zakończToolStripMenuItem_Click);
             // 
@@ -73,6 +76,23 @@
             this.edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
             this.edycjaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.edycjaToolStripMenuItem.Text = "Edycja";
+            // 
+            // widokToolStripMenuItem
+            // 
+            this.widokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pełnyEkranToolStripMenuItem});
+            this.widokToolStripMenuItem.Name = "widokToolStripMenuItem";
+            this.widokToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.widokToolStripMenuItem.Text = "Widok";
+            // 
+            // pełnyEkranToolStripMenuItem
+            // 
+            this.pełnyEkranToolStripMenuItem.CheckOnClick = true;
+            this.pełnyEkranToolStripMenuItem.Name = "pełnyEkranToolStripMenuItem";
+            this.pełnyEkranToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
+            this.pełnyEkranToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.pełnyEkranToolStripMenuItem.Text = "Pełny ekran";
+            this.pełnyEkranToolStripMenuItem.Click += new System.EventHandler(this.pełnyEkranToolStripMenuItem_Click);
             // 
             // pomocToolStripMenuItem
             // 
@@ -115,10 +135,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 370);
+            this.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.piano_1655558_1920;
+            this.ClientSize = new System.Drawing.Size(421, 317);
             this.Controls.Add(this.menuStrip1);
             this.Name = "StronaGłówna";
-            this.Text = "Form1";
+            this.Text = "Program";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -138,6 +159,8 @@
         private System.Windows.Forms.ToolStripMenuItem otwórzDokumentacjęToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otwórzPrzewodnikPoAplikacjiToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem widokToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pełnyEkranToolStripMenuItem;
     }
 }
 
