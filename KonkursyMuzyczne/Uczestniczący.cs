@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KonkursyMuzyczne
 {
-    public partial class Uczestnicy: Form
+    public partial class Uczestniczący : Form
     {
-        public Uczestnicy()
+        public Uczestniczący()
         {
             InitializeComponent();
         }

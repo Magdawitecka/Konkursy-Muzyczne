@@ -90,5 +90,11 @@ namespace KonkursyMuzyczne
                 this.WindowState = FormWindowState.Normal;
             }
         }
+
+        private void uczestnicy_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

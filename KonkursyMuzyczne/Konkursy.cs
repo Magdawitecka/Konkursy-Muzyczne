@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace KonkursyMuzyczne
 {
-    public partial class Uczestnicy: Form
+    public partial class Konkursy : Form
     {
-        public Uczestnicy()
+        public Konkursy()
         {
             InitializeComponent();
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

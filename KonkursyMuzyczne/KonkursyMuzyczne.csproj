@@ -59,6 +59,23 @@
     <Compile Include="EdycjeKonkursu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="KonkursyMuzyczneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KonkursyMuzyczneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Uczestniczący.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uczestniczący.Designer.cs">
+      <DependentUpon>Uczestniczący.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Konkursy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Konkursy.Designer.cs">
+      <DependentUpon>Konkursy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Konkurs.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -87,10 +104,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Uczestnicy.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uczestnicy.Designer.cs">
+      <DependentUpon>Uczestnicy.cs</DependentUpon>
     </Compile>
     <Compile Include="UczestnicyEdycji.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Konkursy.resx">
+      <DependentUpon>Konkursy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StronaGłówna.resx">
       <DependentUpon>StronaGłówna.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +132,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="KonkursyMuzyczneDataSet.xsc">
+      <DependentUpon>KonkursyMuzyczneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KonkursyMuzyczneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KonkursyMuzyczneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KonkursyMuzyczneDataSet.xss">
+      <DependentUpon>KonkursyMuzyczneDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

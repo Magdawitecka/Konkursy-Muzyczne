@@ -39,7 +39,12 @@
             this.otwórzPrzewodnikPoAplikacjiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.informacjeOProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.konkursy = new System.Windows.Forms.Button();
+            this.uczestnicy = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -51,7 +56,7 @@
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(421, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(462, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -131,18 +136,69 @@
             this.informacjeOProgramieToolStripMenuItem.Text = "Informacje o programie";
             this.informacjeOProgramieToolStripMenuItem.Click += new System.EventHandler(this.informacjeOProgramieToolStripMenuItem_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.piano_1655558_1920;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.konkursy);
+            this.panel1.Controls.Add(this.uczestnicy);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(462, 284);
+            this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Allura", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(147, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 36);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Strona Główna";
+            // 
+            // konkursy
+            // 
+            this.konkursy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.konkursy.AutoEllipsis = true;
+            this.konkursy.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.konkursy.Location = new System.Drawing.Point(249, 88);
+            this.konkursy.Name = "konkursy";
+            this.konkursy.Size = new System.Drawing.Size(120, 130);
+            this.konkursy.TabIndex = 2;
+            this.konkursy.Text = "Konkursy";
+            this.konkursy.UseVisualStyleBackColor = true;
+            // 
+            // uczestnicy
+            // 
+            this.uczestnicy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.uczestnicy.AutoEllipsis = true;
+            this.uczestnicy.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uczestnicy.Location = new System.Drawing.Point(95, 88);
+            this.uczestnicy.Name = "uczestnicy";
+            this.uczestnicy.Size = new System.Drawing.Size(120, 130);
+            this.uczestnicy.TabIndex = 0;
+            this.uczestnicy.Text = "Uczestnicy";
+            this.uczestnicy.UseVisualStyleBackColor = true;
+            this.uczestnicy.Click += new System.EventHandler(this.uczestnicy_Click);
+            // 
             // StronaGłówna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.piano_1655558_1920;
-            this.ClientSize = new System.Drawing.Size(421, 317);
+            this.ClientSize = new System.Drawing.Size(462, 308);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "StronaGłówna";
             this.Text = "Program";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +217,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem widokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pełnyEkranToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button konkursy;
+        private System.Windows.Forms.Button uczestnicy;
+        private System.Windows.Forms.Label label1;
     }
 }
 
