@@ -26,11 +26,10 @@ namespace KonkursyMuzyczne.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-MAGDY\\SQLEXPRESS;Initial Catalog=KonkursyMuzyczne;Integrated S" +
-            "ecurity=True")]
-        public string KonkursyMuzyczneConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute(@"Provider=SQLNCLI11;Data Source=LAPTOP-MAGDY\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=BazaKonkursy;Initial File Name=""D:\Dokumenty\Rok III\Semestr V\Programowanie w technologii ADO.NET\Program\KonkursyMuzyczne\Konkursy-Muzyczne\KonkursyMuzyczne\KonkursyMuzyczne.mdf""")]
+        public string BazaConnectionString {
             get {
-                return ((string)(this["KonkursyMuzyczneConnectionString"]));
+                return ((string)(this["BazaConnectionString"]));
             }
         }
     }

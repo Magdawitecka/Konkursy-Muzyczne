@@ -2,13 +2,13 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KonkursyMuzyczne.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="KonkursyMuzyczneConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="BazaConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=LAPTOP-MAGDY\SQLEXPRESS;Initial Catalog=KonkursyMuzyczne;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+  &lt;ConnectionString&gt;Provider=SQLNCLI11;Data Source=LAPTOP-MAGDY\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=BazaKonkursy;Initial File Name="D:\Dokumenty\Rok III\Semestr V\Programowanie w technologii ADO.NET\Program\KonkursyMuzyczne\Konkursy-Muzyczne\KonkursyMuzyczne\KonkursyMuzyczne.mdf"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LAPTOP-MAGDY\SQLEXPRESS;Initial Catalog=KonkursyMuzyczne;Integrated Security=True</Value>
+      <Value Profile="(Default)">Provider=SQLNCLI11;Data Source=LAPTOP-MAGDY\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=BazaKonkursy;Initial File Name="D:\Dokumenty\Rok III\Semestr V\Programowanie w technologii ADO.NET\Program\KonkursyMuzyczne\Konkursy-Muzyczne\KonkursyMuzyczne\KonkursyMuzyczne.mdf"</Value>
     </Setting>
   </Settings>
 </SettingsFile>

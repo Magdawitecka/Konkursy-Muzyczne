@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KonkursyMuzyczne
@@ -46,7 +39,7 @@ namespace KonkursyMuzyczne
             //Zamknięcie programu:
             if (rezultat == DialogResult.Yes)
             {
-                Dispose();
+                Application.Exit();
             }
         }
 
@@ -96,5 +89,14 @@ namespace KonkursyMuzyczne
 
         }
 
+        private void konkursy_Click(object sender, EventArgs e)
+        {
+            // Tworzenie nowej instancji
+            Konkursy konkursy = new Konkursy();
+
+            // Dodawanie ustawień do stworzonej instancji
+            konkursy.Show();
+            this.Visible = false;
+        }
     }
 }
