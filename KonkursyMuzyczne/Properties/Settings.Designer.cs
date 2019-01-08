@@ -32,5 +32,27 @@ namespace KonkursyMuzyczne.Properties {
                 return ((string)(this["BazaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"|DataDirectory|\\KonkursyMuzy" +
+            "czne — kopia.mdf\";Integrated Security=True;Connect Timeout=30")]
+        public string BazaKonkursyConnectionString {
+            get {
+                return ((string)(this["BazaKonkursyConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\BazaKonkursow" +
+            ".mdf;Integrated Security=True;Connect Timeout=30")]
+        public string BazaKonkursowConnectionString {
+            get {
+                return ((string)(this["BazaKonkursowConnectionString"]));
+            }
+        }
     }
 }

@@ -4,23 +4,14 @@ using System.Windows.Forms;
 namespace KonkursyMuzyczne
 {
     public partial class StronaGłówna : Form
+
     {
         public StronaGłówna()
         {
             InitializeComponent();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

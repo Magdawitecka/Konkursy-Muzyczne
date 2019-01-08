@@ -19,8 +19,8 @@ namespace KonkursyMuzyczne
 
         private void Konkursy_Load(object sender, EventArgs e)
         {
-            // Ten wiersz kodu wczytuje dane do tabeli 'bazaKonkursyDataSet.Konkurs'.
-            this.konkursTableAdapter.Fill(this.bazaKonkursyDataSet.Konkurs);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'bazaKonkursowDataSet.Konkurs' . Możesz go przenieść lub usunąć.
+            this.konkursTableAdapter.Fill(this.bazaKonkursowDataSet.Konkurs);
         }
 
         private void pełnyEkranToolStripMenuItem_Click(object sender, EventArgs e)

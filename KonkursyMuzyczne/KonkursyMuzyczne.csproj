@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -73,10 +73,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BazaKonkursyDataSet.Designer.cs">
+    <Compile Include="BazaKonkursowDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BazaKonkursyDataSet.xsd</DependentUpon>
+      <DependentUpon>BazaKonkursowDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Konkursy.cs">
       <DependentUpon>konkursy.xsd</DependentUpon>
@@ -109,16 +109,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="BazaKonkursyDataSet.xsc">
-      <DependentUpon>BazaKonkursyDataSet.xsd</DependentUpon>
+    <None Include="BazaKonkursowDataSet.xsc">
+      <DependentUpon>BazaKonkursowDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BazaKonkursyDataSet.xsd">
+    <None Include="BazaKonkursowDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BazaKonkursyDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BazaKonkursowDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BazaKonkursyDataSet.xss">
-      <DependentUpon>BazaKonkursyDataSet.xsd</DependentUpon>
+    <None Include="BazaKonkursowDataSet.xss">
+      <DependentUpon>BazaKonkursowDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -153,6 +153,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BazaKonkursow.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BazaKonkursow_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BazaKonkursow.mdf</DependentUpon>
+    </Content>
     <Content Include="Ikona.ico" />
     <None Include="Resources\uczestnicyedycji1.png" />
     <None Include="Resources\edycje1.png" />

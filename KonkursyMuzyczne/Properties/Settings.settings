@@ -10,5 +10,21 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Provider=SQLNCLI11;Data Source=LAPTOP-MAGDY\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=BazaKonkursy;Initial File Name="D:\Dokumenty\Rok III\Semestr V\Programowanie w technologii ADO.NET\Program\KonkursyMuzyczne\Konkursy-Muzyczne\KonkursyMuzyczne\KonkursyMuzyczne.mdf"</Value>
     </Setting>
+    <Setting Name="BazaKonkursyConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="|DataDirectory|\KonkursyMuzyczne — kopia.mdf";Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="|DataDirectory|\KonkursyMuzyczne — kopia.mdf";Integrated Security=True;Connect Timeout=30</Value>
+    </Setting>
+    <Setting Name="BazaKonkursowConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BazaKonkursow.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BazaKonkursow.mdf;Integrated Security=True;Connect Timeout=30</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
