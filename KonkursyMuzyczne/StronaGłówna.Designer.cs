@@ -75,7 +75,7 @@
             // 
             this.zakończToolStripMenuItem.Name = "zakończToolStripMenuItem";
             this.zakończToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zakończToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.zakończToolStripMenuItem.Text = "Zakończ";
             this.zakończToolStripMenuItem.Click += new System.EventHandler(this.zakończToolStripMenuItem_Click);
             // 
@@ -98,7 +98,7 @@
             this.pełnyEkranToolStripMenuItem.CheckOnClick = true;
             this.pełnyEkranToolStripMenuItem.Name = "pełnyEkranToolStripMenuItem";
             this.pełnyEkranToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.pełnyEkranToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pełnyEkranToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.pełnyEkranToolStripMenuItem.Text = "Pełny ekran";
             this.pełnyEkranToolStripMenuItem.Click += new System.EventHandler(this.pełnyEkranToolStripMenuItem_Click);
             // 
@@ -238,6 +238,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(425, 529);
             this.Name = "StronaGłówna";
             this.Text = "Program";

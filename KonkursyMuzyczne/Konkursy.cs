@@ -5,6 +5,13 @@ namespace KonkursyMuzyczne
 {
     public partial class Konkursy : Form
     {
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            Application.Exit();
+        }
+
         public Konkursy()
         {
             InitializeComponent();
@@ -15,6 +22,7 @@ namespace KonkursyMuzyczne
             // Ten wiersz kodu wczytuje dane do tabeli 'bazaKonkursyDataSet.Konkurs'.
             this.konkursTableAdapter.Fill(this.bazaKonkursyDataSet.Konkurs);
         }
+
         private void pełnyEkranToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Ustawienie pełnego ekranu:

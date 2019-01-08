@@ -412,9 +412,11 @@
             this.ClientSize = new System.Drawing.Size(868, 487);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(884, 526);
             this.Name = "Konkursy";
             this.Text = "Konkursy";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Konkursy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).EndInit();
