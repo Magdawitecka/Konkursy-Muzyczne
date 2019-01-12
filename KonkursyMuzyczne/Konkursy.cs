@@ -97,14 +97,7 @@ namespace KonkursyMuzyczne
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=(LocalDB)\""+"MSSQLLocalDB;AttachDbFilename=|DataDirectory|\"BazaKonkursow.mdf;Integrated Security=True;Connect Timeout=30";
-            
-            SqlConnection con = new SqlConnection(connectionString);
-            CommandType cmd = CommandType.Text;
-            string commandName = "INSERT INTO Konkursy VALUES (@nazwa, @rodzaj, @cyklicznosc, @lokalizacja, @zasieg, @organizator, @zalozyciel)";
-            string paramert1 = nazwa.Text;
-            string parametr2 = rodzaj.Text;
-            int parametr3 = Convert.ToInt32(cyklicznosc.Value);
+
         }
     }
 }

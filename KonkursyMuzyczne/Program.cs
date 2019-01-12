@@ -16,7 +16,20 @@ namespace KonkursyMuzyczne
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StronaGłówna());
+            try
+            {
+                Application.Run(new StronaGłówna());
+            }
+            catch (SystemException e)
+            {
+                //Deklarowanie treści komunikatu:
+                string tytul = "Błąd";
+
+                //Komunikat do zamknięcia programu:
+                var rezultat = MessageBox.Show(Convert.ToString(e.StackTrace), tytul,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Error);
+            }
         }
     }
 }

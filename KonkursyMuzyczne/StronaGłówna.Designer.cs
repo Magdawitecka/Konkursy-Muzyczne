@@ -163,6 +163,8 @@
             this.uczestnicyEdycji.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.uczestnicyedycji1;
             this.uczestnicyEdycji.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
             this.uczestnicyEdycji.Location = new System.Drawing.Point(221, 284);
+            this.uczestnicyEdycji.MaximumSize = new System.Drawing.Size(120, 130);
+            this.uczestnicyEdycji.MinimumSize = new System.Drawing.Size(120, 130);
             this.uczestnicyEdycji.Name = "uczestnicyEdycji";
             this.uczestnicyEdycji.Size = new System.Drawing.Size(120, 130);
             this.uczestnicyEdycji.TabIndex = 5;
@@ -177,6 +179,8 @@
             this.edycje.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.edycje1;
             this.edycje.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
             this.edycje.Location = new System.Drawing.Point(67, 284);
+            this.edycje.MaximumSize = new System.Drawing.Size(120, 130);
+            this.edycje.MinimumSize = new System.Drawing.Size(120, 130);
             this.edycje.Name = "edycje";
             this.edycje.Size = new System.Drawing.Size(120, 130);
             this.edycje.TabIndex = 4;
@@ -206,6 +210,8 @@
             this.konkursy.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.konkursy2;
             this.konkursy.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
             this.konkursy.Location = new System.Drawing.Point(221, 104);
+            this.konkursy.MaximumSize = new System.Drawing.Size(120, 130);
+            this.konkursy.MinimumSize = new System.Drawing.Size(120, 130);
             this.konkursy.Name = "konkursy";
             this.konkursy.Size = new System.Drawing.Size(120, 130);
             this.konkursy.TabIndex = 2;
@@ -222,6 +228,8 @@
             this.uczestnicy.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.uczestnicy1;
             this.uczestnicy.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uczestnicy.Location = new System.Drawing.Point(67, 104);
+            this.uczestnicy.MaximumSize = new System.Drawing.Size(120, 130);
+            this.uczestnicy.MinimumSize = new System.Drawing.Size(120, 130);
             this.uczestnicy.Name = "uczestnicy";
             this.uczestnicy.Size = new System.Drawing.Size(120, 130);
             this.uczestnicy.TabIndex = 0;
