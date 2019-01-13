@@ -26,9 +26,10 @@ namespace KonkursyMuzyczne
                 string tytul = "Błąd";
 
                 //Komunikat do zamknięcia programu:
-                var rezultat = MessageBox.Show(Convert.ToString(e.StackTrace), tytul,
+                var rezultat = MessageBox.Show(Convert.ToString(e.TargetSite), tytul,
                                              MessageBoxButtons.OK,
                                              MessageBoxIcon.Error);
+
             }
         }
     }
