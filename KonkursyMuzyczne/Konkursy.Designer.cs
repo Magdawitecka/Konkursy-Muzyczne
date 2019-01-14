@@ -33,11 +33,6 @@ namespace KonkursyMuzyczne
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Konkursy));
-            this.konkursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bazaKonkursowDataSet = new KonkursyMuzyczne.BazaKonkursowDataSet();
-            this.konkursTableAdapter = new KonkursyMuzyczne.BazaKonkursowDataSetTableAdapters.KonkursTableAdapter();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -78,6 +73,10 @@ namespace KonkursyMuzyczne
             this.informacjeOProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.powrotSG = new System.Windows.Forms.Button();
+            this.zapisz = new System.Windows.Forms.Button();
+            this.dodaj = new System.Windows.Forms.Button();
+            this.konkursBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bazaKonkursowDataSet = new KonkursyMuzyczne.BazaKonkursowDataSet();
             this.tabelaKonkursy = new System.Windows.Forms.DataGridView();
             this.iDKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,47 +86,15 @@ namespace KonkursyMuzyczne
             this.zasiegKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.organizatorKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zalozycielKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.konkursTableAdapter = new KonkursyMuzyczne.BazaKonkursowDataSetTableAdapters.KonkursTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.cyklicznosc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaKonkursy)).BeginInit();
             this.SuspendLayout();
-            // 
-            // konkursBindingSource
-            // 
-            this.konkursBindingSource.DataMember = "Konkurs";
-            this.konkursBindingSource.DataSource = this.bazaKonkursowDataSet;
-            // 
-            // bazaKonkursowDataSet
-            // 
-            this.bazaKonkursowDataSet.DataSetName = "BazaKonkursowDataSet";
-            this.bazaKonkursowDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // konkursTableAdapter
-            // 
-            this.konkursTableAdapter.ClearBeforeFill = true;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 113);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 13);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "ID";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 131);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown1.TabIndex = 42;
             // 
             // label8
             // 
@@ -193,7 +160,7 @@ namespace KonkursyMuzyczne
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(132, 113);
+            this.label2.Location = new System.Drawing.Point(104, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 35;
@@ -230,6 +197,11 @@ namespace KonkursyMuzyczne
             this.cyklicznosc.Name = "cyklicznosc";
             this.cyklicznosc.Size = new System.Drawing.Size(84, 20);
             this.cyklicznosc.TabIndex = 31;
+            this.cyklicznosc.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lokalizacja
             // 
@@ -242,17 +214,17 @@ namespace KonkursyMuzyczne
             // rodzaj
             // 
             this.rodzaj.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rodzaj.Location = new System.Drawing.Point(250, 130);
+            this.rodzaj.Location = new System.Drawing.Point(235, 130);
             this.rodzaj.Name = "rodzaj";
-            this.rodzaj.Size = new System.Drawing.Size(137, 20);
+            this.rodzaj.Size = new System.Drawing.Size(152, 20);
             this.rodzaj.TabIndex = 29;
             // 
             // nazwa
             // 
             this.nazwa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nazwa.Location = new System.Drawing.Point(63, 130);
+            this.nazwa.Location = new System.Drawing.Point(12, 130);
             this.nazwa.Name = "nazwa";
-            this.nazwa.Size = new System.Drawing.Size(181, 20);
+            this.nazwa.Size = new System.Drawing.Size(217, 20);
             this.nazwa.TabIndex = 28;
             // 
             // bindingNavigator1
@@ -281,7 +253,7 @@ namespace KonkursyMuzyczne
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.bindingNavigator1.Size = new System.Drawing.Size(1004, 25);
             this.bindingNavigator1.TabIndex = 27;
             this.bindingNavigator1.Text = "bindingNavigator1";
@@ -495,6 +467,36 @@ namespace KonkursyMuzyczne
             this.powrotSG.UseVisualStyleBackColor = true;
             this.powrotSG.Click += new System.EventHandler(this.powrotSG_Click);
             // 
+            // zapisz
+            // 
+            this.zapisz.Location = new System.Drawing.Point(165, 77);
+            this.zapisz.Name = "zapisz";
+            this.zapisz.Size = new System.Drawing.Size(114, 23);
+            this.zapisz.TabIndex = 45;
+            this.zapisz.Text = "Zapisz dane w tabeli";
+            this.zapisz.UseVisualStyleBackColor = true;
+            this.zapisz.Click += new System.EventHandler(this.zapisz_Click);
+            // 
+            // dodaj
+            // 
+            this.dodaj.Location = new System.Drawing.Point(285, 77);
+            this.dodaj.Name = "dodaj";
+            this.dodaj.Size = new System.Drawing.Size(122, 23);
+            this.dodaj.TabIndex = 46;
+            this.dodaj.Text = "Dodaj wiersz z danymi";
+            this.dodaj.UseVisualStyleBackColor = true;
+            this.dodaj.Click += new System.EventHandler(this.dodaj_Click);
+            // 
+            // konkursBindingSource
+            // 
+            this.konkursBindingSource.DataMember = "Konkurs";
+            this.konkursBindingSource.DataSource = this.bazaKonkursowDataSet;
+            // 
+            // bazaKonkursowDataSet
+            // 
+            this.bazaKonkursowDataSet.DataSetName = "BazaKonkursowDataSet";
+            this.bazaKonkursowDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tabelaKonkursy
             // 
             this.tabelaKonkursy.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -576,6 +578,10 @@ namespace KonkursyMuzyczne
             this.zalozycielKonkursuDataGridViewTextBoxColumn.Name = "zalozycielKonkursuDataGridViewTextBoxColumn";
             this.zalozycielKonkursuDataGridViewTextBoxColumn.Width = 124;
             // 
+            // konkursTableAdapter
+            // 
+            this.konkursTableAdapter.ClearBeforeFill = true;
+            // 
             // Konkursy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,8 +589,8 @@ namespace KonkursyMuzyczne
             this.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.no_person_3221109_1920;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1004, 563);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.dodaj);
+            this.Controls.Add(this.zapisz);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -612,15 +618,14 @@ namespace KonkursyMuzyczne
             this.Text = "Konkursy";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Konkursy_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cyklicznosc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaKonkursy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -631,8 +636,6 @@ namespace KonkursyMuzyczne
         private System.Windows.Forms.BindingSource konkursBindingSource;
         private BazaKonkursowDataSet bazaKonkursowDataSet;
         private BazaKonkursowDataSetTableAdapters.KonkursTableAdapter konkursTableAdapter;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -682,5 +685,7 @@ namespace KonkursyMuzyczne
         private System.Windows.Forms.DataGridViewTextBoxColumn zasiegKonkursuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn organizatorKonkursuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn zalozycielKonkursuDataGridViewTextBoxColumn;
+        private Button zapisz;
+        private Button dodaj;
     }
 }

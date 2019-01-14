@@ -602,8 +602,7 @@ namespace KonkursyMuzyczne {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDEdycjiKonkursu}, true));
                 this.columnIDEdycjiKonkursu.AutoIncrement = true;
-                this.columnIDEdycjiKonkursu.AutoIncrementSeed = -1;
-                this.columnIDEdycjiKonkursu.AutoIncrementStep = -1;
+                this.columnIDEdycjiKonkursu.AutoIncrementSeed = 1;
                 this.columnIDEdycjiKonkursu.AllowDBNull = false;
                 this.columnIDEdycjiKonkursu.ReadOnly = true;
                 this.columnIDEdycjiKonkursu.Unique = true;
@@ -968,8 +967,7 @@ namespace KonkursyMuzyczne {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDKonkursu}, true));
                 this.columnIDKonkursu.AutoIncrement = true;
-                this.columnIDKonkursu.AutoIncrementSeed = -1;
-                this.columnIDKonkursu.AutoIncrementStep = -1;
+                this.columnIDKonkursu.AutoIncrementSeed = 1;
                 this.columnIDKonkursu.AllowDBNull = false;
                 this.columnIDKonkursu.ReadOnly = true;
                 this.columnIDKonkursu.Unique = true;
@@ -977,6 +975,7 @@ namespace KonkursyMuzyczne {
                 this.columnNazwaKonkursu.MaxLength = 100;
                 this.columnRodzajKonkursu.AllowDBNull = false;
                 this.columnRodzajKonkursu.MaxLength = 15;
+                this.columnCyklicznoscKonkursu.AllowDBNull = false;
                 this.columnLokalizacjaKonkursu.AllowDBNull = false;
                 this.columnLokalizacjaKonkursu.MaxLength = 25;
                 this.columnZasiegKonkursu.AllowDBNull = false;
@@ -1339,8 +1338,7 @@ namespace KonkursyMuzyczne {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDUczestnika}, true));
                 this.columnIDUczestnika.AutoIncrement = true;
-                this.columnIDUczestnika.AutoIncrementSeed = -1;
-                this.columnIDUczestnika.AutoIncrementStep = -1;
+                this.columnIDUczestnika.AutoIncrementSeed = 1;
                 this.columnIDUczestnika.AllowDBNull = false;
                 this.columnIDUczestnika.ReadOnly = true;
                 this.columnIDUczestnika.Unique = true;
@@ -1976,12 +1974,7 @@ namespace KonkursyMuzyczne {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int CyklicznoscKonkursu {
                 get {
-                    try {
-                        return ((int)(this[this.tableKonkurs.CyklicznoscKonkursuColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'CyklicznoscKonkursu\' w tabeli \'Konkurs\' to DBNull.", e);
-                    }
+                    return ((int)(this[this.tableKonkurs.CyklicznoscKonkursuColumn]));
                 }
                 set {
                     this[this.tableKonkurs.CyklicznoscKonkursuColumn] = value;
@@ -2035,18 +2028,6 @@ namespace KonkursyMuzyczne {
                 set {
                     this[this.tableKonkurs.ZalozycielKonkursuColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCyklicznoscKonkursuNull() {
-                return this.IsNull(this.tableKonkurs.CyklicznoscKonkursuColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCyklicznoscKonkursuNull() {
-                this[this.tableKonkurs.CyklicznoscKonkursuColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3143,7 +3124,7 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IDKonkursu, string Original_NazwaKonkursu, string Original_RodzajKonkursu, global::System.Nullable<int> Original_CyklicznoscKonkursu, string Original_LokalizacjaKonkursu, string Original_ZasiegKonkursu, string Original_OrganizatorKonkursu, string Original_ZalozycielKonkursu) {
+        public virtual int Delete(int Original_IDKonkursu, string Original_NazwaKonkursu, string Original_RodzajKonkursu, int Original_CyklicznoscKonkursu, string Original_LokalizacjaKonkursu, string Original_ZasiegKonkursu, string Original_OrganizatorKonkursu, string Original_ZalozycielKonkursu) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IDKonkursu));
             if ((Original_NazwaKonkursu == null)) {
                 throw new global::System.ArgumentNullException("Original_NazwaKonkursu");
@@ -3157,14 +3138,8 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_RodzajKonkursu));
             }
-            if ((Original_CyklicznoscKonkursu.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_CyklicznoscKonkursu.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_CyklicznoscKonkursu));
             if ((Original_LokalizacjaKonkursu == null)) {
                 throw new global::System.ArgumentNullException("Original_LokalizacjaKonkursu");
             }
@@ -3211,7 +3186,7 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NazwaKonkursu, string RodzajKonkursu, global::System.Nullable<int> CyklicznoscKonkursu, string LokalizacjaKonkursu, string ZasiegKonkursu, string OrganizatorKonkursu, string ZalozycielKonkursu) {
+        public virtual int Insert(string NazwaKonkursu, string RodzajKonkursu, int CyklicznoscKonkursu, string LokalizacjaKonkursu, string ZasiegKonkursu, string OrganizatorKonkursu, string ZalozycielKonkursu) {
             if ((NazwaKonkursu == null)) {
                 throw new global::System.ArgumentNullException("NazwaKonkursu");
             }
@@ -3224,12 +3199,7 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(RodzajKonkursu));
             }
-            if ((CyklicznoscKonkursu.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(CyklicznoscKonkursu.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(CyklicznoscKonkursu));
             if ((LokalizacjaKonkursu == null)) {
                 throw new global::System.ArgumentNullException("LokalizacjaKonkursu");
             }
@@ -3277,7 +3247,7 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
         public virtual int Update(
                     string NazwaKonkursu, 
                     string RodzajKonkursu, 
-                    global::System.Nullable<int> CyklicznoscKonkursu, 
+                    int CyklicznoscKonkursu, 
                     string LokalizacjaKonkursu, 
                     string ZasiegKonkursu, 
                     string OrganizatorKonkursu, 
@@ -3285,7 +3255,7 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
                     int Original_IDKonkursu, 
                     string Original_NazwaKonkursu, 
                     string Original_RodzajKonkursu, 
-                    global::System.Nullable<int> Original_CyklicznoscKonkursu, 
+                    int Original_CyklicznoscKonkursu, 
                     string Original_LokalizacjaKonkursu, 
                     string Original_ZasiegKonkursu, 
                     string Original_OrganizatorKonkursu, 
@@ -3303,12 +3273,7 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(RodzajKonkursu));
             }
-            if ((CyklicznoscKonkursu.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(CyklicznoscKonkursu.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(CyklicznoscKonkursu));
             if ((LokalizacjaKonkursu == null)) {
                 throw new global::System.ArgumentNullException("LokalizacjaKonkursu");
             }
@@ -3346,14 +3311,8 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_RodzajKonkursu));
             }
-            if ((Original_CyklicznoscKonkursu.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_CyklicznoscKonkursu.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_CyklicznoscKonkursu));
             if ((Original_LokalizacjaKonkursu == null)) {
                 throw new global::System.ArgumentNullException("Original_LokalizacjaKonkursu");
             }
@@ -3401,7 +3360,7 @@ SELECT IDKonkursu, NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, Lokalizac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NazwaKonkursu, string RodzajKonkursu, global::System.Nullable<int> CyklicznoscKonkursu, string LokalizacjaKonkursu, string ZasiegKonkursu, string OrganizatorKonkursu, string ZalozycielKonkursu, int Original_IDKonkursu, string Original_NazwaKonkursu, string Original_RodzajKonkursu, global::System.Nullable<int> Original_CyklicznoscKonkursu, string Original_LokalizacjaKonkursu, string Original_ZasiegKonkursu, string Original_OrganizatorKonkursu, string Original_ZalozycielKonkursu) {
+        public virtual int Update(string NazwaKonkursu, string RodzajKonkursu, int CyklicznoscKonkursu, string LokalizacjaKonkursu, string ZasiegKonkursu, string OrganizatorKonkursu, string ZalozycielKonkursu, int Original_IDKonkursu, string Original_NazwaKonkursu, string Original_RodzajKonkursu, int Original_CyklicznoscKonkursu, string Original_LokalizacjaKonkursu, string Original_ZasiegKonkursu, string Original_OrganizatorKonkursu, string Original_ZalozycielKonkursu) {
             return this.Update(NazwaKonkursu, RodzajKonkursu, CyklicznoscKonkursu, LokalizacjaKonkursu, ZasiegKonkursu, OrganizatorKonkursu, ZalozycielKonkursu, Original_IDKonkursu, Original_NazwaKonkursu, Original_RodzajKonkursu, Original_CyklicznoscKonkursu, Original_LokalizacjaKonkursu, Original_ZasiegKonkursu, Original_OrganizatorKonkursu, Original_ZalozycielKonkursu, Original_IDKonkursu);
         }
     }

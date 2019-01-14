@@ -99,5 +99,17 @@ namespace KonkursyMuzyczne
         {
            
         }
+
+        private void zapisz_Click(object sender, EventArgs e)
+        {
+            konkursBindingSource.EndEdit();
+            konkursTableAdapter.Update(bazaKonkursowDataSet.Konkurs);
+        }
+
+        private void dodaj_Click(object sender, EventArgs e)
+        {
+            list
+            konkursTableAdapter.Insert(nazwa.Text, rodzaj.Text, Convert.ToInt32(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text);
+        }
     }
 }
