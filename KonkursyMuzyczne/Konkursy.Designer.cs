@@ -469,6 +469,8 @@ namespace KonkursyMuzyczne
             // 
             // zapisz
             // 
+            this.zapisz.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.zapisz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.zapisz.Location = new System.Drawing.Point(165, 77);
             this.zapisz.Name = "zapisz";
             this.zapisz.Size = new System.Drawing.Size(114, 23);
@@ -479,6 +481,7 @@ namespace KonkursyMuzyczne
             // 
             // dodaj
             // 
+            this.dodaj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dodaj.Location = new System.Drawing.Point(285, 77);
             this.dodaj.Name = "dodaj";
             this.dodaj.Size = new System.Drawing.Size(122, 23);

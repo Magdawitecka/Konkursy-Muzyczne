@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace KonkursyMuzyczne
 {
@@ -108,8 +109,20 @@ namespace KonkursyMuzyczne
 
         private void dodaj_Click(object sender, EventArgs e)
         {
-            list
-            konkursTableAdapter.Insert(nazwa.Text, rodzaj.Text, Convert.ToInt32(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text);
+            Boolean rozpoczacInsert = true;
+
+            if(cyklicznosc.Value > 5)
+            {
+                string wiadomosc = "Cykliczność konkursu nie może przekraczać 5 lat";
+                string tytul = "Błąd!";
+                MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                rozpoczacInsert = false;
+            }
+
+            if (rozpoczacInsert == true)
+            {
+                konkursTableAdapter.Insert(nazwa.Text, rodzaj.Text, Convert.ToInt32(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text);
+            }
         }
     }
 }
