@@ -110,18 +110,20 @@ namespace KonkursyMuzyczne
         private void dodaj_Click(object sender, EventArgs e)
         {
             Boolean rozpoczacInsert = true;
+            Konkurs_Szkielet konkursSzkielet = new Konkurs_Szkielet(nazwa.Text, rodzaj.Text, Convert.ToInt32(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text, rozpoczacInsert);
 
             if(cyklicznosc.Value > 5)
             {
                 string wiadomosc = "Cykliczność konkursu nie może przekraczać 5 lat";
                 string tytul = "Błąd!";
                 MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                rozpoczacInsert = false;
             }
 
             if (rozpoczacInsert == true)
             {
                 konkursTableAdapter.Insert(nazwa.Text, rodzaj.Text, Convert.ToInt32(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text);
+                konkursBindingSource.EndEdit();
+                konkursTableAdapter.Update(bazaKonkursowDataSet.Konkurs);
             }
         }
     }

@@ -49,6 +49,8 @@ namespace KonkursyMuzyczne
             this.nazwa = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.konkursBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bazaKonkursowDataSet = new KonkursyMuzyczne.BazaKonkursowDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -75,8 +77,6 @@ namespace KonkursyMuzyczne
             this.powrotSG = new System.Windows.Forms.Button();
             this.zapisz = new System.Windows.Forms.Button();
             this.dodaj = new System.Windows.Forms.Button();
-            this.konkursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bazaKonkursowDataSet = new KonkursyMuzyczne.BazaKonkursowDataSet();
             this.tabelaKonkursy = new System.Windows.Forms.DataGridView();
             this.iDKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,9 +90,9 @@ namespace KonkursyMuzyczne
             ((System.ComponentModel.ISupportInitialize)(this.cyklicznosc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaKonkursy)).BeginInit();
             this.SuspendLayout();
             // 
@@ -267,6 +267,16 @@ namespace KonkursyMuzyczne
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Dodaj nowy";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // konkursBindingSource
+            // 
+            this.konkursBindingSource.DataMember = "Konkurs";
+            this.konkursBindingSource.DataSource = this.bazaKonkursowDataSet;
+            // 
+            // bazaKonkursowDataSet
+            // 
+            this.bazaKonkursowDataSet.DataSetName = "BazaKonkursowDataSet";
+            this.bazaKonkursowDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -490,16 +500,6 @@ namespace KonkursyMuzyczne
             this.dodaj.UseVisualStyleBackColor = true;
             this.dodaj.Click += new System.EventHandler(this.dodaj_Click);
             // 
-            // konkursBindingSource
-            // 
-            this.konkursBindingSource.DataMember = "Konkurs";
-            this.konkursBindingSource.DataSource = this.bazaKonkursowDataSet;
-            // 
-            // bazaKonkursowDataSet
-            // 
-            this.bazaKonkursowDataSet.DataSetName = "BazaKonkursowDataSet";
-            this.bazaKonkursowDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tabelaKonkursy
             // 
             this.tabelaKonkursy.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -619,16 +619,15 @@ namespace KonkursyMuzyczne
             this.MinimumSize = new System.Drawing.Size(1020, 602);
             this.Name = "Konkursy";
             this.Text = "Konkursy";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Konkursy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cyklicznosc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaKonkursy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -85,6 +85,7 @@
     <Compile Include="Konkursy.Designer.cs">
       <DependentUpon>Konkursy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Konkurs_Szkielet.cs" />
     <Compile Include="StronaGłówna.cs">
       <SubType>Form</SubType>
     </Compile>

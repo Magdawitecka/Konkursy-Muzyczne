@@ -12,21 +12,28 @@ namespace KonkursyMuzyczne
         Dictionary<string, string> mapa = new Dictionary<string, string>();
         private String nazwa;
         private String rodzaj;
+        private int cyklicznosc;
         private String lokalizacja;
         private String zasieg;
         private String organizator;
-        public Konkurs_Szkielet(String nazwa, String rodzaj, String lokalizacja, String zasieg, String organizator)
+        private String zalozyciel;
+        private Boolean rozpoczacInsert;
+        public Konkurs_Szkielet(String nazwa, String rodzaj, int cyklicznosc, String lokalizacja, String zasieg, String organizator, String zalozyciel, Boolean rozpoczacInsert)
         {
             this.nazwa = nazwa;
             this.rodzaj = rodzaj;
+            this.cyklicznosc = cyklicznosc;
             this.lokalizacja = lokalizacja;
             this.zasieg = lokalizacja;
             this.organizator = organizator;
+            this.zalozyciel = zalozyciel;
+            this.rozpoczacInsert = rozpoczacInsert;
             this.mapa.Add("nazwa", nazwa);
             this.mapa.Add("rodzaj", rodzaj);
             this.mapa.Add("lokalizacja", lokalizacja);
             this.mapa.Add("zasieg", zasieg);
             this.mapa.Add("organizator", organizator);
+            this.mapa.Add("zalozyciel", zalozyciel);
             sprawdz(mapa);
         }
         public void sprawdz(Dictionary<string, string> mapa)
@@ -34,12 +41,14 @@ namespace KonkursyMuzyczne
             this.mapa = mapa;
             for (int i = 0; i < mapa.Count; i++)
             {
-                if (mapa.ElementAt(i).Value.Equals(null))
+                if (mapa.ElementAt(i).Value.Equals(""))
                 {
                     string wiadomosc = "Pole" + mapa.ElementAt(i).Key + "jest puste!";
                     string tytul = "Błąd!";
 
                     MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    rozpoczacInsert = false;
 
                     break;
                 }

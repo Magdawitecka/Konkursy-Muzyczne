@@ -143,6 +143,7 @@
             this.uczestnicyEdycji.AutoEllipsis = true;
             this.uczestnicyEdycji.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.uczestnicyEdycji.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.uczestnicyedycji1;
+            this.uczestnicyEdycji.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.uczestnicyEdycji.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
             this.uczestnicyEdycji.Location = new System.Drawing.Point(221, 305);
             this.uczestnicyEdycji.MaximumSize = new System.Drawing.Size(120, 130);
@@ -159,6 +160,7 @@
             this.edycje.AutoEllipsis = true;
             this.edycje.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.edycje.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.edycje1;
+            this.edycje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.edycje.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
             this.edycje.Location = new System.Drawing.Point(67, 305);
             this.edycje.MaximumSize = new System.Drawing.Size(120, 130);
@@ -190,6 +192,7 @@
             this.konkursy.AutoEllipsis = true;
             this.konkursy.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.konkursy.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.konkursy2;
+            this.konkursy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.konkursy.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic);
             this.konkursy.Location = new System.Drawing.Point(221, 125);
             this.konkursy.MaximumSize = new System.Drawing.Size(120, 130);
@@ -208,6 +211,7 @@
             this.uczestnicy.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.uczestnicy.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.uczestnicy.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.uczestnicy1;
+            this.uczestnicy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.uczestnicy.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uczestnicy.Location = new System.Drawing.Point(67, 125);
             this.uczestnicy.MaximumSize = new System.Drawing.Size(120, 130);
