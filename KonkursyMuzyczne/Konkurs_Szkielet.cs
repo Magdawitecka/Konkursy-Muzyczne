@@ -17,8 +17,13 @@ namespace KonkursyMuzyczne
         private String zasieg;
         private String organizator;
         private String zalozyciel;
-        private Boolean rozpoczacInsert;
-        public Konkurs_Szkielet(String nazwa, String rodzaj, int cyklicznosc, String lokalizacja, String zasieg, String organizator, String zalozyciel, Boolean rozpoczacInsert)
+        private Boolean rozpoczacInsert = true;
+        public Boolean getRozpoczacInsert()
+        {
+            return this.rozpoczacInsert;
+        }
+
+        public Konkurs_Szkielet(String nazwa, String rodzaj, int cyklicznosc, String lokalizacja, String zasieg, String organizator, String zalozyciel)
         {
             this.nazwa = nazwa;
             this.rodzaj = rodzaj;
@@ -27,15 +32,26 @@ namespace KonkursyMuzyczne
             this.zasieg = lokalizacja;
             this.organizator = organizator;
             this.zalozyciel = zalozyciel;
-            this.rozpoczacInsert = rozpoczacInsert;
             this.mapa.Add("nazwa", nazwa);
             this.mapa.Add("rodzaj", rodzaj);
             this.mapa.Add("lokalizacja", lokalizacja);
-            this.mapa.Add("zasieg", zasieg);
+            this.mapa.Add("zasięg", zasieg);
             this.mapa.Add("organizator", organizator);
-            this.mapa.Add("zalozyciel", zalozyciel);
-            sprawdz(mapa);
-        }
+            this.mapa.Add("zalożyciel", zalozyciel);
+            if (cyklicznosc <= 0)
+            {
+                string wiadomosc = "Pole cykliczność ma niedopuszczaną wartość!";
+                string tytul = "Błąd!";
+
+                MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                rozpoczacInsert = false;
+            }
+            else
+            {
+                sprawdz(mapa);
+            }
+    }
         public void sprawdz(Dictionary<string, string> mapa)
         {
             this.mapa = mapa;
@@ -43,7 +59,7 @@ namespace KonkursyMuzyczne
             {
                 if (mapa.ElementAt(i).Value.Equals(""))
                 {
-                    string wiadomosc = "Pole" + mapa.ElementAt(i).Key + "jest puste!";
+                    string wiadomosc = "Pole " + mapa.ElementAt(i).Key + " jest puste!";
                     string tytul = "Błąd!";
 
                     MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Error);

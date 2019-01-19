@@ -194,9 +194,19 @@ namespace KonkursyMuzyczne
             // 
             this.cyklicznosc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cyklicznosc.Location = new System.Drawing.Point(393, 130);
+            this.cyklicznosc.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.cyklicznosc.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.cyklicznosc.Name = "cyklicznosc";
             this.cyklicznosc.Size = new System.Drawing.Size(84, 20);
-            this.cyklicznosc.TabIndex = 31;
+            this.cyklicznosc.TabIndex = 30;
             this.cyklicznosc.Value = new decimal(new int[] {
             1,
             0,
@@ -209,7 +219,7 @@ namespace KonkursyMuzyczne
             this.lokalizacja.Location = new System.Drawing.Point(483, 130);
             this.lokalizacja.Name = "lokalizacja";
             this.lokalizacja.Size = new System.Drawing.Size(102, 20);
-            this.lokalizacja.TabIndex = 30;
+            this.lokalizacja.TabIndex = 31;
             // 
             // rodzaj
             // 
@@ -293,6 +303,7 @@ namespace KonkursyMuzyczne
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Usuń";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -523,6 +534,7 @@ namespace KonkursyMuzyczne
             this.tabelaKonkursy.Name = "tabelaKonkursy";
             this.tabelaKonkursy.Size = new System.Drawing.Size(977, 386);
             this.tabelaKonkursy.TabIndex = 23;
+            this.tabelaKonkursy.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.tabelaKonkursy_DataError);
             // 
             // iDKonkursuDataGridViewTextBoxColumn
             // 

@@ -23,8 +23,9 @@ namespace KonkursyMuzyczne
 
         private void Konkursy_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'bazaKonkursowDataSet.Konkurs' . Możesz go przenieść lub usunąć.
+            // Ten wiersz kodu wczytuje dane do tabeli 'bazaKonkursowDataSet.Konkurs' .
             this.konkursTableAdapter.Fill(this.bazaKonkursowDataSet.Konkurs);
+            
         }
 
         private void pełnyEkranToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,22 +110,31 @@ namespace KonkursyMuzyczne
 
         private void dodaj_Click(object sender, EventArgs e)
         {
-            Boolean rozpoczacInsert = true;
-            Konkurs_Szkielet konkursSzkielet = new Konkurs_Szkielet(nazwa.Text, rodzaj.Text, Convert.ToInt32(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text, rozpoczacInsert);
+            Konkurs_Szkielet konkursSzkielet = new Konkurs_Szkielet(nazwa.Text, rodzaj.Text, Convert.ToInt32(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text);
 
-            if(cyklicznosc.Value > 5)
-            {
-                string wiadomosc = "Cykliczność konkursu nie może przekraczać 5 lat";
-                string tytul = "Błąd!";
-                MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            if (rozpoczacInsert == true)
+            if (konkursSzkielet.getRozpoczacInsert() == true)
             {
                 konkursTableAdapter.Insert(nazwa.Text, rodzaj.Text, Convert.ToInt32(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text);
                 konkursBindingSource.EndEdit();
-                konkursTableAdapter.Update(bazaKonkursowDataSet.Konkurs);
+                konkursTableAdapter.Fill(bazaKonkursowDataSet.Konkurs);
             }
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            konkursBindingSource.EndEdit();
+            konkursTableAdapter.Update(bazaKonkursowDataSet.Konkurs);
+            konkursTableAdapter.Fill(bazaKonkursowDataSet.Konkurs);
+        }
+
+        private void tabelaKonkursy_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            //Deklarowanie treści komunikatu:
+            string wiadomosc = "Niepoprawne dane w komórce!";
+            string tytul = "Błąd!";
+
+            //Komunikat z informacjami o programie:
+            MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

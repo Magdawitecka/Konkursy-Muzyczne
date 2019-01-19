@@ -154,13 +154,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BazaKonkursow.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="BazaKonkursow_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BazaKonkursow.mdf</DependentUpon>
-    </Content>
     <Content Include="Ikona.ico" />
     <None Include="Resources\uczestnicyedycji1.png" />
     <None Include="Resources\edycje1.png" />
