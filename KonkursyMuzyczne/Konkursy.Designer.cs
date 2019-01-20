@@ -50,7 +50,6 @@ namespace KonkursyMuzyczne
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.konkursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bazaKonkursowDataSet = new KonkursyMuzyczne.BazaKonkursowDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -87,13 +86,17 @@ namespace KonkursyMuzyczne
             this.organizatorKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zalozycielKonkursuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.konkursTableAdapter = new KonkursyMuzyczne.BazaKonkursowDataSetTableAdapters.KonkursTableAdapter();
+            this.usunWiersz = new System.Windows.Forms.Button();
+            this.wypelnionyWiersz = new System.Windows.Forms.Button();
+            this.select = new System.Windows.Forms.Button();
+            this.bazaKonkursowDataSet = new KonkursyMuzyczne.BazaKonkursowDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.cyklicznosc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaKonkursy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -282,11 +285,7 @@ namespace KonkursyMuzyczne
             // 
             this.konkursBindingSource.DataMember = "Konkurs";
             this.konkursBindingSource.DataSource = this.bazaKonkursowDataSet;
-            // 
-            // bazaKonkursowDataSet
-            // 
-            this.bazaKonkursowDataSet.DataSetName = "BazaKonkursowDataSet";
-            this.bazaKonkursowDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.konkursBindingSource.DataError += new System.Windows.Forms.BindingManagerDataErrorEventHandler(this.konkursBindingSource_DataError);
             // 
             // bindingNavigatorCountItem
             // 
@@ -471,7 +470,7 @@ namespace KonkursyMuzyczne
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(449, 61);
+            this.label1.Location = new System.Drawing.Point(447, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 43);
             this.label1.TabIndex = 25;
@@ -514,7 +513,6 @@ namespace KonkursyMuzyczne
             // tabelaKonkursy
             // 
             this.tabelaKonkursy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tabelaKonkursy.AutoGenerateColumns = false;
             this.tabelaKonkursy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.tabelaKonkursy.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelaKonkursy.BackgroundColor = System.Drawing.SystemColors.MenuBar;
@@ -529,7 +527,6 @@ namespace KonkursyMuzyczne
             this.organizatorKonkursuDataGridViewTextBoxColumn,
             this.zalozycielKonkursuDataGridViewTextBoxColumn});
             this.tabelaKonkursy.DataMember = "Konkurs";
-            this.tabelaKonkursy.DataSource = this.bazaKonkursowDataSet;
             this.tabelaKonkursy.Location = new System.Drawing.Point(12, 165);
             this.tabelaKonkursy.Name = "tabelaKonkursy";
             this.tabelaKonkursy.Size = new System.Drawing.Size(977, 386);
@@ -597,6 +594,41 @@ namespace KonkursyMuzyczne
             // 
             this.konkursTableAdapter.ClearBeforeFill = true;
             // 
+            // usunWiersz
+            // 
+            this.usunWiersz.Location = new System.Drawing.Point(617, 77);
+            this.usunWiersz.Name = "usunWiersz";
+            this.usunWiersz.Size = new System.Drawing.Size(133, 23);
+            this.usunWiersz.TabIndex = 48;
+            this.usunWiersz.Text = "Usuń zaznaczony wiersz";
+            this.usunWiersz.UseVisualStyleBackColor = true;
+            this.usunWiersz.Click += new System.EventHandler(this.usunWiersz_Click);
+            // 
+            // wypelnionyWiersz
+            // 
+            this.wypelnionyWiersz.Location = new System.Drawing.Point(758, 77);
+            this.wypelnionyWiersz.Name = "wypelnionyWiersz";
+            this.wypelnionyWiersz.Size = new System.Drawing.Size(134, 23);
+            this.wypelnionyWiersz.TabIndex = 49;
+            this.wypelnionyWiersz.Text = "Usuń wyznaczony wiesz";
+            this.wypelnionyWiersz.UseVisualStyleBackColor = true;
+            this.wypelnionyWiersz.Click += new System.EventHandler(this.wypelnionyWiersz_Click);
+            // 
+            // select
+            // 
+            this.select.Location = new System.Drawing.Point(898, 77);
+            this.select.Name = "select";
+            this.select.Size = new System.Drawing.Size(70, 23);
+            this.select.TabIndex = 50;
+            this.select.Text = "button1";
+            this.select.UseVisualStyleBackColor = true;
+            this.select.Click += new System.EventHandler(this.select_Click);
+            // 
+            // bazaKonkursowDataSet
+            // 
+            this.bazaKonkursowDataSet.DataSetName = "BazaKonkursowDataSet";
+            this.bazaKonkursowDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Konkursy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,6 +636,9 @@ namespace KonkursyMuzyczne
             this.BackgroundImage = global::KonkursyMuzyczne.Properties.Resources.no_person_3221109_1920;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1004, 563);
+            this.Controls.Add(this.select);
+            this.Controls.Add(this.wypelnionyWiersz);
+            this.Controls.Add(this.usunWiersz);
             this.Controls.Add(this.dodaj);
             this.Controls.Add(this.zapisz);
             this.Controls.Add(this.label8);
@@ -637,18 +672,16 @@ namespace KonkursyMuzyczne
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.konkursBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaKonkursy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bazaKonkursowDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource konkursBindingSource;
-        private BazaKonkursowDataSet bazaKonkursowDataSet;
         private BazaKonkursowDataSetTableAdapters.KonkursTableAdapter konkursTableAdapter;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -691,15 +724,20 @@ namespace KonkursyMuzyczne
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button powrotSG;
         private System.Windows.Forms.DataGridView tabelaKonkursy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDKonkursuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaKonkursuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rodzajKonkursuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cyklicznoscKonkursuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lokalizacjaKonkursuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zasiegKonkursuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn organizatorKonkursuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zalozycielKonkursuDataGridViewTextBoxColumn;
         private Button zapisz;
         private Button dodaj;
+        private Button usunWiersz;
+        private Button wypelnionyWiersz;
+        private Button select;
+        private DataGridViewTextBoxColumn iDKonkursuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nazwaKonkursuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn rodzajKonkursuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn cyklicznoscKonkursuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lokalizacjaKonkursuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn zasiegKonkursuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn organizatorKonkursuDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn zalozycielKonkursuDataGridViewTextBoxColumn;
+        private BazaKonkursowDataSet bazaKonkursowDataSet;
+        private BindingSource konkursBindingSource;
     }
 }
