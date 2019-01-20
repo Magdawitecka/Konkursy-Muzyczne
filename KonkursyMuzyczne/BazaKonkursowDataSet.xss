@@ -7,24 +7,24 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="42" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:EdycjeKonkursu" ZOrder="7" X="74" Y="70" Height="191" Width="233" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:Konkurs" ZOrder="1" X="377" Y="69" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
-    <Shape ID="DesignTable:Uczestnicy" ZOrder="6" X="686" Y="369" Height="229" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
-    <Shape ID="DesignTable:UczestnicyEdycji" ZOrder="2" X="377" Y="369" Height="191" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
+    <Shape ID="DesignTable:Konkurs" ZOrder="6" X="377" Y="70" Height="229" Width="192" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:Uczestnicy" ZOrder="5" X="686" Y="369" Height="229" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:UczestnicyEdycji" ZOrder="4" X="377" Y="369" Height="172" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK__EdycjeKon__IDKon__398D8EEE" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:FK__EdycjeKon__IDKon__398D8EEE" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>377</X>
-          <Y>164</Y>
+          <Y>165</Y>
         </Point>
         <Point>
           <X>307</X>
-          <Y>164</Y>
+          <Y>165</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Uczestnic__IDEdy__3E52440B" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Uczestnic__IDEdy__3E52440B" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>290</X>
@@ -40,7 +40,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Uczestnic__IDUcz__3F466844" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Uczestnic__IDUcz__3F466844" ZOrder="1" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>686</X>

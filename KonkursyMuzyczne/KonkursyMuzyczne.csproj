@@ -73,9 +73,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BazaKonkursowDataSet.cs">
-      <DependentUpon>BazaKonkursowDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BazaKonkursowDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,8 +115,8 @@
     </None>
     <None Include="BazaKonkursowDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>BazaKonkursowDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="BazaKonkursowDataSet.xss">
       <DependentUpon>BazaKonkursowDataSet.xsd</DependentUpon>
@@ -136,9 +133,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\piano-1655558_1920.jpg" />
@@ -159,13 +154,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BazaKonkursow.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="BazaKonkursow_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BazaKonkursow.mdf</DependentUpon>
-    </Content>
     <Content Include="Ikona.ico" />
     <None Include="Resources\uczestnicyedycji1.png" />
     <None Include="Resources\edycje1.png" />

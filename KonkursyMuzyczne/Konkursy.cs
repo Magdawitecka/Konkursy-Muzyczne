@@ -135,60 +135,6 @@ namespace KonkursyMuzyczne
 
             //Komunikat z informacjami o programie:
             MessageBox.Show(wiadomosc, tytul, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            tabelaKonkursy.CancelEdit();
-        }
-
-        private void konkursBindingSource_DataError(object sender, BindingManagerDataErrorEventArgs e)
-        {
-
-        }
-
-        private void usunWiersz_Click(object sender, EventArgs e)
-        {
-            //Deklarowanie treści komunikatu:
-            string wiadomosc = "Czy jestes pewny ze chcesz usunąć zaznaczony rekord?";
-            string tytul = "Usuń";
-
-            //Komunikat dotyczący usunięcia rekordu:
-            var rezultat = MessageBox.Show(wiadomosc, tytul,
-                                         MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question);
-
-            //Usuwanie rekordu:
-            if (rezultat == DialogResult.Yes)
-            {
-                konkursBindingSource.RemoveAt(tabelaKonkursy.CurrentRow.Index);
-                konkursBindingSource.EndEdit();
-                konkursTableAdapter.Update(bazaKonkursowDataSet.Konkurs);
-                konkursTableAdapter.Fill(bazaKonkursowDataSet.Konkurs);
-            }
-        }
-
-        private void wypelnionyWiersz_Click(object sender, EventArgs e)
-        {
-            //Deklarowanie treści komunikatu:
-            string wiadomosc = "Czy jestes pewny ze chcesz usunąć wpisany rekord?";
-            string tytul = "Usuń";
-
-            //Komunikat dotyczący usunięcia rekordu:
-            var rezultat = MessageBox.Show(wiadomosc, tytul,
-                                         MessageBoxButtons.YesNo,
-                                         MessageBoxIcon.Question);
-
-            //Usuwanie rekordu:
-            if (rezultat == DialogResult.Yes)
-            {
-                konkursTableAdapter.DeleteSelected(nazwa.Text, rodzaj.Text, Convert.ToString(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text);
-                konkursBindingSource.EndEdit();
-                konkursTableAdapter.Update(bazaKonkursowDataSet.Konkurs);
-                konkursTableAdapter.Fill(bazaKonkursowDataSet.Konkurs);
-            }
-        }
-
-        private void select_Click(object sender, EventArgs e)
-        {
-            konkursTableAdapter.FillSelected(bazaKonkursowDataSet.Konkurs, nazwa.Text, rodzaj.Text, Convert.ToString(cyklicznosc.Value), lokalizacja.Text, zasieg.Text, organizator.Text, zalozyciel.Text);
         }
     }
 }
